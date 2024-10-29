@@ -180,7 +180,7 @@ export default function Settings() {
           <div style={{ marginTop: "20px" }}>
             <form>
               <div style={{display: "flex", justifyContent: "space-between"}}>
-            <div className="mb-3" style={{ width: "48%"}}>
+            <div className="mb-3" style={{ width: "100%"}}>
                 <label>Name</label>
                 <input
                   type="text"
@@ -191,7 +191,7 @@ export default function Settings() {
               </div>
               </div>
       
-              <div className="mb-3" style={{ width: "48%"}}>
+              <div className="mb-3" style={{ width: "100%"}}>
                 <label>Phone Number</label>
                 <input
                   type="tel"

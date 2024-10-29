@@ -98,7 +98,7 @@ export default function Dashboard() {
                         </div>
                     </div>
                 </div>
-                <div className="card col-sm-7">
+                <div className="card col-sm-7 table-responsive">
                     <h5>Recent Expenses Approved</h5>
                     <hr />
                     <table class="table">

@@ -39,7 +39,7 @@
 }
 
 .nav-link:hover {
-  background-color: #f0f0f0; /* Change background on hover */
+  background-color: #f0f0f0; 
   padding: 8px;
 }
 
@@ -75,7 +75,7 @@
   }
 
   &:hover{
-    background-color: #f0f0f0; /* Change background on hover */
+    background-color: #f0f0f0;
     padding: 8px;
   }
 }
@@ -88,7 +88,6 @@
 
 input.form-control, textarea.form-control, select.form-select {
   padding: 1rem 1.2rem;
-  /* margin: 1rem; */
   border-radius: 2rem;
   border: none;
   box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075), 6px 6px 6px rgba(255, 255, 255, 0.781);
@@ -107,10 +106,6 @@ table{
     width: 100%;
 }
 
-/* .row.chart{
-  height: 40%;
-} */
-
 @media (max-width: 992px) {
   .d-flex.align-items-start#navBar {
     display: none !important
@@ -121,23 +116,20 @@ canvas{
   height: 350px !important;
 }
 
-@media (max-width: 576px) {
-  .mb-3.row.newExpenses{
-  display: unset !important;
-} }
-
-
 
 @media (max-width: 576px) {
-  .checkInAndOut{
-    flex-direction: column
+  /* Rule 1: Adjusting the newExpenses row */
+  .mb-3.row.newExpenses {
+    display: unset !important;
   }
 
-
-  .col-sm-10.newExpenses{
-    width: unset !important;
+  /* Rule 2: Adjusting checkInAndOut layout */
+  .checkInAndOut {
+    flex-direction: column;
   }
+
+  /* Rule 3: Adjusting the newExpenses column width */
+  .col-sm-10.newExpenses {
+    width: auto !important;
   }
-
-
-
+}

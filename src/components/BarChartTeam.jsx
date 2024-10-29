@@ -21,8 +21,8 @@ export default function BarChartTeam() {
 
     const [softDevExpense, setSoftDevExpense] = useState(0);
     console.log(softDevExpense)
- 
-    
+
+
     useEffect(() => {
         const getData = async () => {
             const response = await fetch('https://backend-2txi.vercel.app/expenses');
@@ -101,5 +101,8 @@ export default function BarChartTeam() {
         },
     };
 
-    return <Bar data={data} options={options} />;
+    return <div style={{ width: "80%", height: "400px", margin: "0 auto" }}>
+        <Bar data={data} options={options} />
+    </div>
+
 }

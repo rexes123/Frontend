@@ -107,9 +107,9 @@ table{
     width: 100%;
 }
 
-.row.chart{
+/* .row.chart{
   height: 40%;
-}
+} */
 
 @media (max-width: 992px) {
   .d-flex.align-items-start#navBar {
@@ -117,5 +117,7 @@ table{
   }
 }
 
-
+canvas{
+  height: 350px !important;
+}
 

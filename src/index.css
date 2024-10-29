@@ -121,3 +121,7 @@ canvas{
   height: 350px !important;
 }
 
+
+.mb-3.row{
+  flex-wrap: wrap;
+}

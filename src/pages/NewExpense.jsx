@@ -106,7 +106,7 @@ export default function NewExpense() {
                         { label: "Employee Name*", value: employee, setter: setEmployee },
                         { label: "Team*", value: team, setter: setTeam, select: true, options: ["Select team", "Project management", "Software development", "Design team"] },
                     ].map(({ label, value, setter, type, select, options }, index) => (
-                        <div className="mb-3 row" key={index}>
+                        <div className="mb-3 row newExpense" key={index}>
                             <label className="col-sm-2 col-form-label">{label}</label>
                             <div className="col-sm-10">
                                 {select ? (

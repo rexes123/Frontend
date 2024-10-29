@@ -132,4 +132,11 @@ canvas{
   .col-sm-10.newExpenses {
     width: auto !important;
   }
+
+  .mb-3.row.newExpense{
+    flex-wrap: wrap;
+  }
 }
+
+
+

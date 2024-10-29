@@ -121,25 +121,23 @@ canvas{
   height: 350px !important;
 }
 
-
-/* .mb-3.row{
-  flex-wrap: wrap;
-} */
-
-/* .col-sm-10{
-  width: 100%;
-} */
-
-/* .row{
-  display: unset !important;
-} */
-
-/* .mb-3.row.newExpenses{
-  display: unset !important;
-} */
-
-
 @media (max-width: 576px) {
   .mb-3.row.newExpenses{
   display: unset !important;
 } }
+
+
+
+@media (max-width: 576px) {
+  .checkInAndOut{
+    flex-direction: column
+  }
+
+
+  .col-sm-10.newExpenses{
+    width: unset !important;
+  }
+  }
+
+
+

@@ -86,7 +86,7 @@ export default function NewTrips() {
                 <hr />
                 <div class="mb-3 row newExpenses">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Name*</label>
-                    <div class="col-sm-10" style={{width: "60%"}}>
+                    <div class="col-sm-10 newExpenses">
                         <input type="text" class="form-control" id="inputPassword" value={name} onChange={(e)=> setName(e.target.value)}/>
                     </div>
                 </div>
@@ -168,16 +168,16 @@ export default function NewTrips() {
 
                 <h3>ACCOMODATION</h3>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <div style={{ width: "60%", display: 'flex', justifyContent: "space-between" }}>
+                    <div style={{ width: "60%", display: 'flex', justifyContent: "space-between" }} className="checkInAndOut">
                         <div class="mb-3 row newExpenses">
                             <label for="staticEmail" class="col-sm-2 col-form-label" style={{width: "40%"}}>Check-in*</label>
-                            <div class="col-sm-10" style={{width: "60%"}}>
+                            <div class="col-sm-10 newExpenses" style={{width: "60%"}}>
                                 <input type="date" class="form-control" id="checkIn" value={check_in} onChange={(e)=> setCheck_in(e.target.value)}/>
                             </div>
                         </div>
                         <div class="mb-3 row newExpenses">
                             <label for="staticEmail" class="col-sm-2 col-form-label" style={{width: "40%"}}>Check-out*</label>
-                            <div class="col-sm-10" style={{width: "60%"}}>
+                            <div class="col-sm-10 newExpenses" style={{width: "60%"}}>
                                 <input type="date" class="form-control" id="checkOut" value={check_out} onChange={(e)=> setCheck_out(e.target.value)}/>
                             </div>
                         </div>

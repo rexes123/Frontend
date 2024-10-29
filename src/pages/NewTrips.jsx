@@ -141,7 +141,7 @@ export default function NewTrips() {
                 </div>
 
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <div style={{ width: "60%" }}>
+                    <div style={{ width: "60%" }} class="trip-mobile">
 
                         <div class="mb-3 row newExpenses">
                             <label for="staticEmail" class="col-sm-2 col-form-label">Depart from*</label>
@@ -167,10 +167,10 @@ export default function NewTrips() {
                 </div>
 
                 <h3>ACCOMODATION</h3>
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <div style={{ width: "60%", display: 'flex', justifyContent: "space-between" }} className="checkInAndOut">
+                <div style={{ display: "flex", justifyContent: "space-between" }} className="trip-mobile">
+                    <div style={{ width: "60%", display: 'flex', justifyContent: "space-between" }} className="checkInAndOut trip-mobile">
                         <div class="mb-3 row newExpenses">
-                            <label for="staticEmail" class="col-sm-2 col-form-label" style={{width: "40%"}}>Check-in*</label>
+                            <label for="staticEmail" class="col-sm-2 col-form-label trip-mobile" style={{width: "40%"}} >Check-in*</label>
                             <div class="col-sm-10 newExpenses" style={{width: "60%"}}>
                                 <input type="date" class="form-control" id="checkIn" value={check_in} onChange={(e)=> setCheck_in(e.target.value)}/>
                             </div>
@@ -183,22 +183,22 @@ export default function NewTrips() {
                         </div>
                     </div>
 
-                    <div style={{ width: "30%" }}>
+                    <div style={{ width: "30%" }} className="mobile-width-zero">
 
                     </div>
                 </div>
 
                 <div className="accomodation" style={{ display: "flex", justifyContent: "space-between" }}>
-                    <div style={{ width: "60%", display: 'flex', justifyContent: "space-between" }}>
-                        <div class="mb-3 row newExpenses" style={{width: "104%"}}>
-                            <label for="staticEmail" class="col-sm-2 col-form-label" style={{width: "20%"}}>Hotel*</label>
-                            <div class="col-sm-10" style={{width: "80%"}}>
+                    <div style={{ width: "60%", display: 'flex', justifyContent: "space-between" }} className="trip-mobile">
+                        <div class="mb-3 row newExpenses" style={{width: "100%"}}>
+                            <label for="staticEmail" class="col-sm-2 col-form-label trip-mobile" style={{width: "20%"}}>Hotel*</label>
+                            <div class="col-sm-10 trip-mobile" style={{width: "80%"}}>
                                 <input type="text" class="form-control" id="inputPassword" value={hotel} onChange={(e)=>setHotel(e.target.value)}/>
                             </div>
                         </div>
                     </div>
 
-                    <div className="hotel" style={{ width: "30%", display: "flex", gap: "10px" }}>
+                    <div className="hotel mobile-width-zero" style={{ width: "30%", display: "flex", gap: "10px" }}>
                         <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </div>

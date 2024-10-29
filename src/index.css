@@ -136,7 +136,20 @@ canvas{
   .mb-3.row.newExpense{
     flex-wrap: wrap;
   }
+
+  .trip-mobile{
+    width: 100% !important;
+  }
+
+  .mobile-width-zero{
+    width: 0% !important; 
+  }
 }
+
+
+
+
+
 
 
 

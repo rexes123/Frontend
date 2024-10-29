@@ -1,0 +1,14 @@
+{
+    "routes": [
+        {
+            "src": "/(.*)\\.(js|css|png|jpg|jpeg|svg|ico|woff2?)$",
+            "headers": { "cache-control": "max-age=31536000" },
+            "dest": "/$1.$2"
+        },
+        {
+            "src": "/[^.]+",
+            "dest": "/",
+            "status": 200
+        }
+    ]
+}

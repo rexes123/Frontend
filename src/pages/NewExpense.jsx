@@ -86,7 +86,7 @@ export default function NewExpense() {
     }, [loading]);
 
     return (
-        <div className="container" style={{ display: "flex" }}>
+        <div className="container marginLeft250" style={{ display: "flex" }}>
             <div className="container">
                 <div style={{ display: "flex", justifyContent: "flex-end" }}>
                     <button type="button" className="btn-close" onClick={() => navigate('/expense')}></button>

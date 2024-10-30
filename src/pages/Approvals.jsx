@@ -51,11 +51,9 @@ export default function Approvals() {
     };
 
     const handleStatusChange = async (id, newStatus, type) => {
-        console.log(`Updating ${type} ID:`, id, "with new status:", newStatus);
 
         const itemExists = data.some(item => item.id === id);
         if (!itemExists) {
-            console.error(`No ${type} found with ID: ${id}`);
             return;
         }
 
@@ -141,77 +139,11 @@ export default function Approvals() {
     }
 
     return (
-        <div className="container" style={{ display: "flex" }}>
+        <div className="container marginLeft250" style={{ display: "flex" }}>
             <div style={{ width: "100%" }}>
                 {selectedItems.size > 0 && (
                     <button onClick={handleDeleteSelected} type="button" className="btn btn-danger">Delete Selected</button>
                 )}
-
-                {/* <table className="table">
-                    <thead>
-                        <tr>
-                            {
-                                userRole === 'admin' && (
-                                    <th scope="col">
-                                        <input
-                                            type="checkbox"
-                                            checked={selectAll}
-                                            onChange={handleSelectAllChange}
-                                        />
-                                    </th>
-                                )
-                            }
-
-                            <th scope="col">Name</th>
-                            <th scope="col">Category</th>
-                            <th scope="col">Amount</th>
-                            <th scope="col">Frequency</th>
-                            <th>View</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {data.map((item) => (
-                            <tr key={item.id}>
-                                {
-                                    userRole === 'admin' && (
-                                        <th scope="row">
-                                            <input
-                                                type="checkbox"
-                                                checked={selectedItems.has(item.id)}
-                                                onChange={() => handleCheckBoxChange(item.id)}
-                                            />
-                                        </th>
-                                    )
-                                }
-                                <td>{item.subject || item.name}</td>
-                                <td>{item.category}</td>
-                                <td>{item.amount}</td>
-                                <td>{formatDate(item.create_at)}</td>
-                                <td>
-                                    <div>
-                                        <i className="bi bi-receipt" onClick={() => handleViewImage(item.invoiceurl)}></i>
-                                    </div>
-                                </td>
-                                {userRole === 'admin' ? (
-                                    <td>
-                                        <select
-                                            className="form-select"
-                                            value={item.status}
-                                            onChange={(e) => handleStatusChange(item.id, e.target.value, item.type)}
-                                        >
-                                            <option value="approved">Approved</option>
-                                            <option value="rejected">Rejected</option>
-                                            <option value="pending">Pending</option>
-                                        </select>
-                                    </td>
-                                ) : (
-                                    <td>{item.status}</td>
-                                )}
-                            </tr>
-                        ))}
-                    </tbody>
-                </table> */}
 
                 <div className="card-container">
                     {data.map((item) => (

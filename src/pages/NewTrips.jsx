@@ -17,16 +17,6 @@ export default function NewTrips() {
     const [hotel, setHotel] = useState('');
 
     const { user } = useContext(AuthContext)
-    console.log(user.uid);
-
-    console.log(name);
-    console.log(type);
-    console.log(purpose)
-    console.log(depart_from);
-    console.log(destination)
-    console.log(check_out)
-    console.log(hotel);
-
 
     const navigate = useNavigate();
 
@@ -34,7 +24,6 @@ export default function NewTrips() {
     //Handle form submission
     const handleSubmit = async(event)=>{
         event.preventDefault();
-        console.log('Submit')
 
          const formData = {
              name, 
@@ -49,8 +38,6 @@ export default function NewTrips() {
              hotel,
              uid: user.uid
          };
-
-         console.log(formData);
 
         // //Send data to backend
          try{

@@ -148,10 +148,15 @@ canvas{
   .profilePic{
     flex-direction: column;
   }
+
+  
 }
 
-
-
+@media (min-width: 993px){
+  .marginLeft250{
+      margin-left: 250px;
+  }
+}  
 
 
 

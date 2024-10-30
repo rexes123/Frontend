@@ -32,17 +32,6 @@ export default function Expense() {
         navigate("/newExpense");
     };
 
-    console.log(data);
-
-    // useEffect(() => {
-    //     const getData = async () => {
-    //         const response = await fetch('https://backend-2txi.vercel.app/expenses');
-    //         const data = await response.json();
-    //         setData(data);
-    //     };
-    //     getData();
-    // }, []);
-
 
     const handleCheckBoxChange = (id) => {
         const updatedSelection = new Set(selectedExpenses);
@@ -109,7 +98,7 @@ export default function Expense() {
 
 
     return (
-        <div className="container" style={{ display: "flex" }}>
+        <div className="container marginLeft250" style={{ display: "flex"}}>
             <div style={{ width: "100%" }}>
                 <button onClick={handleAdd} type="button" class="btn btn-success" style={{ marginRight: "10px" }}>+ New expense</button>
 

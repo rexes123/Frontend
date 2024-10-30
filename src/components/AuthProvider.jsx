@@ -10,7 +10,6 @@ export function AuthProvider({ children }) {
     return storedUser ? JSON.parse(storedUser) : null;
   });
 
-  console.log(user);
 
   const auth = getAuth();
 

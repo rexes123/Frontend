@@ -41,7 +41,6 @@ export default function SignUp() {
             // Create a new user
             const response = await createUserWithEmailAndPassword(auth, email, password);
             const uid = response.user.uid;
-            console.log(`User created with UID: ${uid}`);
 
             // Save user data to Firestore
             await setDoc(doc(db, 'users', uid), {

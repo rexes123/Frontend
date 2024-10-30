@@ -49,7 +49,6 @@ export default function Settings() {
           setLoading(false);
         }
       } else {
-        console.log('No user is signed in');
         setLoading(false);
       }
     };
@@ -101,7 +100,6 @@ export default function Settings() {
         }
 
         setFileUrl('');
-        console.log("Profile picture removed successfully.");
       } catch (e) {
         console.error('Error removing profile picture:', e);
       }
@@ -149,7 +147,7 @@ export default function Settings() {
   };
 
   return (
-    <div className="d-flex align-items-start" style={{ width: "100%"}}>
+    <div className="d-flex align-items-start marginLeft250" style={{ width: "100%"}}>
       <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical" style={{ width: "100%"}}>
         <div className="profilePic" style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
         {loadingImage ? (
@@ -203,7 +201,7 @@ export default function Settings() {
             </form>
           </div>
         )}
-        <button type="button" className="btn btn-primary" onClick={handleProfileUpdate} style={{ width: "25%"}}>
+        <button type="button" className="btn btn-primary" onClick={handleProfileUpdate} style={{ width: "25%", minWidth: "120px"}}>
           Update Profile
         </button>
       </div>

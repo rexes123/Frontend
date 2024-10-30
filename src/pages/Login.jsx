@@ -9,10 +9,6 @@ export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-
-    console.log(email);
-    console.log(password);
-
     const user = localStorage.getItem('user');
     const auth = getAuth();
 
@@ -40,13 +36,11 @@ export default function Login() {
 
 
     const handleLogin = async (e) => {
-        console.log('Login')
         e.preventDefault();
 
         try {
             const response = await signInWithEmailAndPassword(auth, email, password)
             const user = response.user;
-            console.log(user);
 
             localStorage.setItem('user', JSON.stringify({
                 uid: user.uid,
@@ -59,7 +53,6 @@ export default function Login() {
     }
 
     const navSignUp = () =>{
-        console.log('Sign Up')
         navigate('/signup')
     }
 

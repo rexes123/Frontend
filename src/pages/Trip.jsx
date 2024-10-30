@@ -5,6 +5,7 @@ import { AuthContext } from "../components/AuthProvider";
 export default function Trip() {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
+  console.log(data)
   const [selectedTrips, setSelectedTrips] = useState(new Set());
   const { user } = useContext(AuthContext);
 
@@ -19,10 +20,9 @@ export default function Trip() {
       const url = user.email === "admin@gmail.com"
         ? "https://backend-2txi.vercel.app/trips"
         : `https://backend-2txi.vercel.app/trips/user/${user.uid}`;
-      
+
       const response = await fetch(url);
       const data = await response.json();
-      console.log("Response from server:", data);
       setData(data);
     } catch (error) {
       console.error("Error fetching trips:", error.message);
@@ -100,7 +100,7 @@ export default function Trip() {
   };
 
   return (
-    <div className="container" style={{ display: "flex" }}>
+    <div className="container marginLeft250" style={{ display: "flex" }}>
       <div style={{ width: "100%" }}>
         <button
           onClick={navToNewTrip}
@@ -139,11 +139,9 @@ export default function Trip() {
                 <h5 className="card-title">{trip.purpose}</h5>
                 <p className="card-text mb-2">
                   <strong>Departure:</strong> {formatDate(trip.depart_from)} <br />
-                  <strong>Return:</strong> {formatDate(trip.return_date)} <br />
+                  <strong>Return:</strong> {formatDate(trip.destination)} <br />
                   <strong>Amount:</strong> RM{" "}
-                  {typeof trip.amount === "number"
-                    ? trip.amount.toFixed(2)
-                    : "N/A"}{" "}
+                  <span>{trip.amount}</span>
                   <br />
                   <strong>Report Created:</strong> {formatDate(trip.create_at)}
                 </p>

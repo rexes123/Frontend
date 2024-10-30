@@ -15,7 +15,6 @@ import { auth } from "../firebase";
 export default function Nav() {
 
   const { user } = useContext(AuthContext);
-  console.log(user);
 
   const navigate = useNavigate();
 
@@ -23,7 +22,6 @@ export default function Nav() {
   const [fileUrl, setFileUrl] = useState('');
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
-  console.log(file)
   const [loading, setLoading] = useState(true);
 
   const [loadingImage, setLoadingImage] = useState(true);
@@ -56,7 +54,6 @@ export default function Nav() {
           setLoading(false);
         }
       } else {
-        console.log('No user is signed in');
         setLoading(false); //Set loading to false if no user is signed in
       }
     };
@@ -67,7 +64,6 @@ export default function Nav() {
     const selectedFile = e.target.files[0];
     if (!selectedFile) return;
 
-    console.log(selectedFile);
     setFile(selectedFile);
     setUploading(true);
 
@@ -136,7 +132,6 @@ export default function Nav() {
 
 
   const [activeTab, setActiveTab] = useState('');
-  console.log(activeTab);
 
   const renderContent = () => {
     if (activeTab === 'home') {
@@ -152,7 +147,6 @@ export default function Nav() {
       localStorage.removeItem('user');
       setUserData(null);
       navigate('/login')
-      console.log('Logout')
     } catch (error) {
       console.error(error.message);
     }
@@ -169,7 +163,7 @@ export default function Nav() {
 
 
   return (
-    <div class="d-flex align-items-start" id="navBar">
+    <div class="d-flex align-items-start" style={{position: "fixed"}} id="navBar">
 
       <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         {loadingImage ? (
@@ -208,7 +202,7 @@ export default function Nav() {
           <NavLink to="/approvals" className="form-control" role="tab"><i class="bi bi-clipboard-check navBar__icon" /><span style={{marginLeft: "10px"}}>Approvals</span></NavLink>
           <NavLink to="/settings" className="form-control" role="tab" class="nav-link"><i class="bi bi-gear navBar__icon"></i><span style={{marginLeft: "10px"}}>Settings</span></NavLink>
         </div>
-        <a onClick={handleLogout} class="logout" style={{ position: 'absolute', bottom: 0, textDecoration: 'none', backgroundColor: "transparent" }}>
+        <a onClick={handleLogout} class="logout" style={{position:"absolute", bottom:"-50%", textDecoration: 'none', backgroundColor: "transparent" }}>
           <i class="bi bi-door-closed navBar__icon"></i>Log out
         </a>
       </div>

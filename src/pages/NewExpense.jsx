@@ -68,7 +68,6 @@ export default function NewExpense() {
 
             if (response.ok) {
                 const data = await response.json();
-                console.log('Expense saved successfully:', data);
                 navigate('/expense');
             } else {
                 setErrorMessage('Failed to save expense. Please try again.');

@@ -18,7 +18,6 @@ export default function Offcanvas() {
     };
 
     const handleLogout = async () => {
-        console.log('Log out')
         try {
           await auth.signOut();
           localStorage.removeItem('user');

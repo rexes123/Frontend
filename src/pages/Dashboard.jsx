@@ -16,20 +16,14 @@ export default function Dashboard() {
     };
 
     const [pendingStatus, setPendingStatus] = useState(0);
-    console.log(pendingStatus);
     const [data, setData] = useState([]);
     const [expenses, setExpenses] = useState([]); // Store actual expenses
-    console.log(expenses);
     const [approvedExpenses, setApprovedExpenses] = useState([]);
-    console.log(approvedExpenses);
 
 
     const softDevExpense = expenses.filter(expense => expense.team === "Software development");
-    console.log(softDevExpense.length);
 
-    // console.log(expenses.create_timestamp);
     const [trips, setTrips] = useState(0);
-    console.log(trips);
 
     useEffect(() => {
         const getData = async () => {
@@ -40,18 +34,15 @@ export default function Dashboard() {
                 ]);
 
                 const expensesData = await expensesResponse.json();
-                console.log(expensesData);
                 const approvedExpense = expensesData.filter(expense => expense.status === 'approved');
                 setApprovedExpenses(approvedExpense)
                 const pendingExpense = expensesData.filter(expense => expense.status === 'pending');
                 setExpenses(pendingExpense);
 
-                // console.log(pendingExpense);
 
 
                 const tripsData = await tripsResponse.json();
                 const pendingTrips = tripsData.filter(trip => trip.status === 'pending');
-                console.log(pendingTrips.length);
                 setTrips(pendingTrips.length);
 
                 // Combine data for pending tasks
@@ -69,7 +60,7 @@ export default function Dashboard() {
     }, []);
 
     return (
-        <div className="container">
+        <div className="container marginLeft250">
             <div className="row tasksAndExpense">
                 <div className="card col-sm-5">
                     <h5>Pending Tasks</h5>

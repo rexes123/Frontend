@@ -111,8 +111,7 @@ export default function Expense() {
                     {data.map((expense) => (
                         <div key={expense.id} className="card my-2">
                             <div className="card-body">
-                                {/* Checkbox for selection */}
-                                {user.user.email === 'admin@gmail.com' && (  // Assuming the admin role check is similar to your example
+                                {user.user.email === 'admin@gmail.com' && ( 
                                     <div className="form-check mb-2">
                                         <input
                                             className="form-check-input"
@@ -120,7 +119,6 @@ export default function Expense() {
                                             checked={selectedExpenses.has(expense.id)}
                                             onChange={() => handleCheckBoxChange(expense.id)}
                                         />
-                                        <label className="form-check-label">Select</label>
                                     </div>
                                 )}
 

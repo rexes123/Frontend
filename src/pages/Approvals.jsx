@@ -157,7 +157,6 @@ export default function Approvals() {
                                             checked={selectedItems.has(item.id)}
                                             onChange={() => handleCheckBoxChange(item.id)}
                                         />
-                                        <label className="form-check-label">Select</label>
                                     </div>
                                 )}
 
